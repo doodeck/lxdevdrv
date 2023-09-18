@@ -9,4 +9,6 @@ sudo yum install kernel-devel
 make -C /lib/modules/`uname -r`/build M=`pwd` modules
 sudo insmod helloworld.ko
 sudo rmmod helloworld
+sudo yum install bpftrace
+
 ```

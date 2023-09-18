@@ -5,12 +5,15 @@
 #include <linux/kernel.h> 
  
 static int __init helloworld_init(void) { 
-    pr_info("Hello world!\n"); 
+    pr_info("Hello world!\n");
+    printk(KERN_NOTICE "Hello world!\n"); 
     return 0; 
 } 
  
+#define EOW "End of the world\n" 
 static void __exit helloworld_exit(void) { 
-    pr_info("End of the world\n"); 
+    pr_info(EOW); 
+    printk(KERN_NOTICE EOW); 
 } 
  
 module_init(helloworld_init); 
